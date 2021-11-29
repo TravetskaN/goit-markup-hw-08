@@ -1,0 +1,44 @@
+.company {
+  display: flex;
+
+  &-item {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      border: 1px solid var(--accent-color);
+    }
+  }
+  &-logo {
+    width: 106px;
+    height: 60px;
+    fill: #afb1b8;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.company-block + .company-block {
+  margin-left: 30px;
+}
+
+.company-item:hover .company-logo,
+.company-item:focus .company-logo {
+  fill: var(--accent-color);
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px 0 15px;
+  margin: 0 auto;
+}

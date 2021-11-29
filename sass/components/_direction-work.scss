@@ -1,0 +1,50 @@
+.work-route {
+  padding-top: 0px;
+}
+
+.direction-work {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  margin-top: 0px;
+
+  &-sections {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  &-cards {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-left: 30px;
+    padding: 0;
+
+    :not(:last-child) {
+      margin-left: 0;
+    }
+  }
+}
+
+.labels {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 27px 0;
+  border-bottom-left-radius: 4px;
+  background: rgba(47, 48, 58, 0.8);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-bg-color);
+}

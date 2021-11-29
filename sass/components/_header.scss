@@ -1,0 +1,49 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &-icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+.logo {
+  font-family: Raleway;
+
+  &-text-first {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    list-style: none;
+  }
+
+  &-text-second {
+    color: var(--logo-color);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    list-style: none;
+  }
+}
+.nav-item {
+  align-content: center;
+
+  + .nav-item {
+    margin-left: 50px;
+  }
+}

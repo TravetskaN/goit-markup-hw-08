@@ -1,0 +1,19 @@
+/*  == Base styles ==  */
+@import "utils/variables";
+@import "utils/common";
+
+/*  == Components styles ==  */
+@import "components/header";
+@import "components/navigation";
+@import "components/current-link";
+@import "components/hero";
+@import "components/activity";
+@import "components/direction-work";
+@import "components/our-team";
+@import "components/company";
+@import "components/filter";
+@import "components/portfolio";
+@import "components/footer";
+
+/*  == Modal styles ==  */
+@import "components/modal";

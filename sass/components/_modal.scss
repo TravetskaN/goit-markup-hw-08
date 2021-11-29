@@ -1,0 +1,237 @@
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 15;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-width: 528px;
+  min-height: 581px;
+  background: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bnt-styles {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 30px;
+  width: 30px;
+  background: var(--primary-bg-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+.hero-bnt-close {
+  width: 18px;
+  height: 18px;
+  fill: var(--logo-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bnt-styles:focus .hero-bnt-close,
+.bnt-styles:hover .hero-bnt-close {
+  fill: var(--accent-color);
+}
+
+.form-hero {
+  position: relative;
+  width: 528px;
+  min-height: 581px;
+  padding: 40px;
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15px;
+
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+    height: 23px;
+
+    color: var(--title-text-color);
+  }
+
+  &-field {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: var(--primary-text-color);
+    text-align: justify;
+    position: relative;
+
+    &:hover,
+    &:hover {
+      color: var(--accent-color);
+      fill: var(--accent-color);
+    }
+
+    &:nth-child(-n + 4) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &-input {
+    padding-left: 42px;
+    margin: 0;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    position: relative;
+    outline: none;
+  }
+  &-label {
+    margin-bottom: 4px;
+  }
+}
+
+.form-hero-field:focus-within .hero-comment {
+  border: 2px solid var(--accent-color);
+}
+
+.form-hero-field:focus-within .form-hero-input {
+  border: 2px solid var(--accent-color);
+}
+.form-hero-field:focus-within .form-icon {
+  fill: var(--accent-color);
+}
+
+.hero-comment {
+  outline: none;
+}
+
+.form-hero-field input::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+}
+
+.form-hero-field:hover .hero-comment {
+  border: 1px solid var(--accent-color);
+}
+
+.hero-mark {
+  flex-direction: row;
+  flex-direction: row;
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.mark-submit {
+  width: 16px;
+  height: 15px;
+  background: var(--accent-color);
+  fill: none;
+  margin-right: 9px;
+  background-color: var(--primary-bg-color);
+  border: 0.2px solid var(--primary-text-color);
+  border-radius: 2px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &-check {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+  }
+
+  &-text {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+    margin-top: 20px;
+    margin-left: 10px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &-enter {
+    color: var(--accent-color);
+    margin-left: 5px;
+  }
+}
+
+.mark-submit-check:checked + .mark-submit {
+  fill: var(--primary-bg-color);
+  background-color: var(--accent-color);
+  border: transparent;
+}
+
+.form-icon {
+  position: absolute;
+  top: 35px;
+  bottom: 11px;
+  left: 12px;
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+}
+
+.bnt-hero-form {
+  width: 200px;
+  height: 50px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: none;
+  padding: 10px 55px;
+
+  color: var(--primary-bg-color);
+
+  &:hover,
+  &:focus {
+    background: #188ce8;
+  }
+}

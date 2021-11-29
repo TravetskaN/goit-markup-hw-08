@@ -1,0 +1,46 @@
+.container {
+  width: 1200px;
+  padding: 0 15px 0 15px;
+  margin: 0 auto;
+}
+
+.body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+.section {
+  padding: 94px 0;
+}
+
+img {
+  display: block;
+}
+ul {
+  list-style: none;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+}
+.link {
+  text-decoration: none;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
