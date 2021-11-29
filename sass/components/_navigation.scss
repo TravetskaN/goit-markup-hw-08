@@ -5,9 +5,13 @@
   letter-spacing: 0.02em;
 
   &-container {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+    display: none;
+
+    @include mq(tablet) {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
   }
 
   &-link {

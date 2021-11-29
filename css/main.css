@@ -153,6 +153,11 @@ p {
 .hero-bnt-menu {
   background-color: transparent;
   border: none;
+  position: absolute;
+  right: 0;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -169,13 +174,19 @@ p {
 }
 
 .navigation-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navigation-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: auto;
+  }
 }
 
 .navigation-link {
@@ -241,25 +252,71 @@ p {
 }
 
 .hero {
-  padding: 200px 0;
-  text-align: center;
-  background-color: var(--secondary-bg-color);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/img-hero.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img-hero.jpg");
+  padding: 118px 0;
   max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--secondary-bacground-color);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/tel.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/tel.jpg");
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/tel@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/tel@2x.jpg");
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/tabl.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/tabl.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/tabl@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/tabl@2x.jpg");
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/dt.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/dt.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/dt@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/dt@2x.jpg");
+  }
 }
 
 .hero-text {
-  color: var(--primary-bg-color);
+  font-size: 26px;
+  line-height: 1.62;
+  max-width: 360px;
+  color: #ffffff;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-top: 0;
+  margin: 0 auto;
   margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  .hero-text {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }
 
 .hero-button {
@@ -942,6 +999,7 @@ p {
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 15;
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -1218,5 +1276,127 @@ textarea {
 
 .bnt-hero-form:hover, .bnt-hero-form:focus {
   background: #188ce8;
+}
+
+.modal-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  background-color: var(--primary-bg-color);
+  top: 100%;
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 100;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-menu__list-item {
+  margin-bottom: 32px;
+}
+
+.modal-menu__contact {
+  margin-bottom: 64px;
+}
+
+.modal-menu__contact-item {
+  margin-bottom: 32px;
+}
+
+.modal-menu__contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.modal-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.modal-menu__link--current {
+  color: var(--accent-color);
+}
+
+.modal-menu__contact-link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.modal-menu__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal-menu__social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.modal-menu .accent {
+  color: var(--accent-color);
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+.is-visible {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.closemark {
+  width: 40px;
+  height: 40px;
+  fill: var(--logo-color);
+  background-color: var(--primary-bg-color);
+  border: none;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  right: 0;
+}
+
+.closemark:focus .svgclose,
+.closemark:hover .svgclose {
+  fill: var(--accent-color);
 }
 /*# sourceMappingURL=main.css.map */

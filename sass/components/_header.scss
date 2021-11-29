@@ -55,6 +55,11 @@
 .hero-bnt-menu {
   background-color: transparent;
   border: none;
+  position: absolute;
+  right: 0;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @include mq(tablet) {
     display: none;
