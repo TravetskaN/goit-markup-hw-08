@@ -12,9 +12,21 @@
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   padding: 0 15px 0 15px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .body {
@@ -95,10 +107,16 @@ p {
 }
 
 .nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 93px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 93px;
+  }
 }
 
 .logo {
@@ -130,6 +148,17 @@ p {
 
 .nav-item + .nav-item {
   margin-left: 50px;
+}
+
+.hero-bnt-menu {
+  background-color: transparent;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .hero-bnt-menu {
+    display: none;
+  }
 }
 
 .navigation {
@@ -263,9 +292,21 @@ p {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   padding: 0 15px 0 15px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .activity {
@@ -374,6 +415,7 @@ p {
   color: var(--primary-bg-color);
 }
 
+/* == Our team block == */
 .our-team-section {
   background-color: var(--section-bg-our-team-color);
   font-weight: 700;
@@ -536,9 +578,21 @@ p {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   padding: 0 15px 0 15px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .filter {

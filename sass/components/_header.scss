@@ -16,8 +16,12 @@
   align-items: center;
 }
 .nav-list {
-  display: flex;
-  margin-left: 93px;
+  display: none;
+
+  @include mq(tablet) {
+    display: flex;
+    margin-left: 93px;
+  }
 }
 .logo {
   font-family: Raleway;
@@ -45,5 +49,14 @@
 
   + .nav-item {
     margin-left: 50px;
+  }
+}
+
+.hero-bnt-menu {
+  background-color: transparent;
+  border: none;
+
+  @include mq(tablet) {
+    display: none;
   }
 }

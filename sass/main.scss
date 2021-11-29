@@ -1,7 +1,7 @@
 /*  == Base styles ==  */
 @import "utils/variables";
-@import "utils/common";
 @import "utils/mixins";
+@import "utils/common";
 
 /*  == Components styles ==  */
 @import "components/header";
@@ -18,3 +18,4 @@
 
 /*  == Modal styles ==  */
 @import "components/modal";
+@import "components/menu";
