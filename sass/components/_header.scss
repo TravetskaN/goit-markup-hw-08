@@ -1,9 +1,10 @@
 .header {
   border-bottom: 1px solid #ececec;
-
+  padding: 10px 0;
   &-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   &-icon {
@@ -23,6 +24,7 @@
     margin-left: 93px;
   }
 }
+
 .logo {
   font-family: Raleway;
 
@@ -45,21 +47,34 @@
   }
 }
 .nav-item {
-  align-content: center;
+  margin-right: 50px;
 
-  + .nav-item {
-    margin-left: 50px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.contacts-link {
+  @include mq(tablet-only) {
+    margin-bottom: 10px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
 .hero-bnt-menu {
   background-color: transparent;
   border: none;
-  position: absolute;
   right: 0;
   padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
+  z-index: 15;
 
   @include mq(tablet) {
     display: none;

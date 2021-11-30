@@ -62,70 +62,66 @@
             >
           </li>
         </ul>
-        <button class="hero-bnt-menu" type="button" data-mobile-menu-open>
-          <svg class="header-bnt-icon" width="40px" height="40px">
-            <use href="./images/icons.svg#icon-menu-btn"></use>
+        <button class="hero-bnt-menu" type="button" data-menu-button aria-expanded="false"
+            aria-controls="mobile-menu">
+          <svg class="header-bnt-icon" width="40px" height="40px"  aria-label="Переключатель мобильного меню">
+            <use class="burger-menu" href="./images/icons.svg#icon-menu-btn"></use>
+            <use class="close-btn" href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
         <!-- modal menu -->
-        <div class="modal-menu is-visible" data-mobile-menu>
-          <button class="closemark closemark-menu" data-mobile-menu-close>
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <!-- <button class="closemark closemark-menu" data-menu-button>
             <svg class="svgclose" width="22" height="22">
-              <use href="./images/icons.svg#icon-close"></use>
             </svg>
-          </button>
-          <div class="wrapper">
-            <ul class="modal-menu__list">
-              <li class="modal-menu__list-item">
-                <a
+          </button> -->
+          <div class="mobile-nav">
+            <ul class="mobile-nav-list">
+              <li class="mobile-contact-item"><a
                   href="index.html"
-                  class="modal-menu__link modal-menu__link--current"
+                  class="mobile-menu-link link current"
                   >Студия</a
+                ></li>
+                <li class="mobile-contact-item">
+                <a
+                  href="portfolio.html"
+                  class="mobile-menu-link link"
+                  >Портфолио</a
                 >
-              </li>
-              <li class="modal-menu__list-item">
-                <a href="portfolio.html" class="modal-menu__link">Портфолио</a>
-              </li>
-              <li class="modal-menu__list-item">
-                <a href="" class="modal-menu__link">Контакты</a>
-              </li>
+                </li>
+                <li class="mobile-contact-item">
+                  <a href="" class="mobile-menu-link link">Контакты</a>
+                </li>
             </ul>
           </div>
-          <div class="wrapper">
-            <ul class="modal-menu__contact">
-              <li class="modal-menu__contact-item">
-                <a
-                  href="tel:+380961111111"
-                  class="modal-menu__contact-link accent"
-                >
-                  +38 096 111 11 11
-                </a>
+          <div class="mobile-nav">
+            <ul>
+              <li class="contact-phone"> 
+                 <a href="tel:+380961111111" class="mobile-contacts accent link">
+              +38 096 111 11 11</a>
               </li>
-              <li class="modal-menu__contact-item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="modal-menu__contact-link"
-                >
-                  info@devstudio.com
-                </a>
+              <li>
+              <a href="mailto:chornyiav@gmail.com"
+              class="mobile-contacts link"
+            >info@devstudio.com</a>
               </li>
             </ul>
-            <ul class="modal-menu__socials">
-              <li class="modal-menu__social">
-                <a href="" class="modal-menu__social-link">Instagram </a>
+              <ul class="mobile-menu-socials">
+              <li class="mobile-social-list">
+                <a href="" class="mobile-social-link">Instagram </a>
               </li>
-              <li class="modal-menu__social">
-                <a href="" class="modal-menu__social-link">Twitter</a>
+              <li class="mobile-social-list">
+                <a href="" class="mobile-social-link">Twitter</a>
               </li>
-              <li class="modal-menu__social">
-                <a href="" class="modal-menu__social-link">Facebook</a>
+              <li class="mobile-social-list">
+                <a href="" class="mobile-social-link">Facebook</a>
               </li>
-              <li class="modal-menu__social">
-                <a href="" class="modal-menu__social-link">LinkedIn</a>
+              <li class="mobile-social-list">
+                <a href="" class="mobile-social-link">LinkedIn</a>
               </li>
             </ul>
+
           </div>
-        </div>
       </div>
     </header>
     <main>
@@ -223,14 +219,14 @@
           </div>
         </div>
       </section>
-      <!--стили работы-->
+      <!-- стили работы-->
       <section class="section">
         <div class="container">
           <ul class="activity">
             <li class="activity__list">
               <div class="activity__cards">
                 <svg class="activity__icon">
-                  <use href="./images/icons.svg#icon-antenna"></use>
+                  <use href="./images/icons.svg#icon-antenna" width="70px" height="70px"></use>
                 </svg>
               </div>
               <h3 class="activity__title">Внимание к деталям</h3>
@@ -242,7 +238,7 @@
             <li class="activity__list">
               <div class="activity__cards">
                 <svg class="activity__icon">
-                  <use href="./images/icons.svg#icon-clock"></use>
+                  <use href="./images/icons.svg#icon-clock" width="70px" height="70px"></use>
                 </svg>
               </div>
               <h3 class="activity__title">Пунктуальность</h3>
@@ -254,7 +250,7 @@
             <li class="activity__list">
               <div class="activity__cards">
                 <svg class="activity__icon">
-                  <use href="./images/icons.svg#icon-diagram"></use>
+                  <use href="./images/icons.svg#icon-diagram" width="70px" height="70px"></use>
                 </svg>
               </div>
               <h3 class="activity__title">Планирование</h3>
@@ -266,7 +262,7 @@
             <li class="activity__list">
               <div class="activity__cards">
                 <svg class="activity__icon">
-                  <use href="./images/icons.svg#icon-astronaut"></use>
+                  <use href="./images/icons.svg#icon-astronaut" width="70px" height="70px"></use>
                 </svg>
               </div>
               <h3 class="activity__title">Современные технологии</h3>
@@ -536,7 +532,7 @@
       </section>
     </main>
     <!--подвал страницы-->
-    <footer class="footer">
+      <!-- <footer class="footer">
       <div class="container footer-content">
         <div class="footer-content-pages">
           <a href="./index.html" class="logo link"
@@ -612,7 +608,7 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer>  -->
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>

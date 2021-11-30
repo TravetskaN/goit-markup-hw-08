@@ -9,7 +9,14 @@
 
     @include mq(tablet) {
       display: flex;
+      flex-direction: column;
+      margin-left: auto;
+    }
+
+    @include mq(desktop) {
+      display: flex;
       align-items: center;
+      flex-direction: row;
       margin-left: auto;
     }
   }
