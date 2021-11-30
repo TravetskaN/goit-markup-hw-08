@@ -318,11 +318,21 @@
           <h2 class="direction-work">Наша команда</h2>
           <ul class="team">
             <li class="our-team-people">
-              <img
-                src="./images/photo1.jpg"
-                alt="Игорь Демьяненко"
-                height="260"
-              />
+              <picture>
+              <source
+              media="(min-width: 1280px)"
+              srcset="./images/team/img_lg.jpg 1x, ./images/team/img@2x_lg.jpg 2x">
+              <source
+              media="(min-width: 768px)"
+              srcset="./images/team/img_md.jpg 1x, ./images/team/img@2x_md.jpg 2x">
+              <img class="image"              
+              srcset="./images/team/img_sm.jpg 1x, ./images/team/img@2x_sm.jpg 2x"
+              src="./images/team/img_sm.jpg"
+              alt="Игорь Демьяненко"
+              width="270"
+              loading="lazy">
+            </picture>
+              
               <div class="persona-info">
                 <h3 class="our-team">Игорь Демьяненко</h3>
                 <p class="our-team-professions">Product Designer</p>
@@ -359,7 +369,20 @@
               </div>
             </li>
             <li class="our-team-people">
-              <img src="./images/photo2.jpg" alt="Ольга Репина" height="260" />
+                <picture>
+              <source
+              media="(min-width: 1280px)"
+              srcset="./images/team/img-1_lg.jpg 1x, ./images/team/img@2x-1_lg.jpg 2x">
+              <source
+              media="(min-width: 768px)"
+              srcset="./images/team/img-1_md.jpg 1x, ./images/team/img@2x-1_md.jpg 2x">
+              <img class="image"              
+              srcset="./images/team/img-1_sm.jpg 1x, ./images/team/img@2x-1_sm.jpg 2x"
+              src="./images/team/img-1_sm.jpg"
+              alt="Ольга Репина"
+              width="270"
+              loading="lazy">
+            </picture>
               <div class="persona-info">
                 <h3 class="our-team">Ольга Репина</h3>
                 <p class="our-team-professions">Frontend Developer</p>
@@ -396,11 +419,21 @@
               </div>
             </li>
             <li class="our-team-people">
-              <img
-                src="./images/photo3.jpg"
-                alt="Николай Тарасов"
-                height="260"
-              />
+              <picture>
+              <source
+              media="(min-width: 1280px)"
+              srcset="./images/team/img-2_lg.jpg 1x, ./images/team/img@2x-2_lg.jpg 2x">
+              <source
+              media="(min-width: 768px)"
+              srcset="./images/team/img-2_md.jpg 1x, ./images/team/img@2x-2_md.jpg 2x">
+              <img class="image"              
+              srcset="./images/team/img-2_sm.jpg 1x, ./images/team/img@2x-2_sm.jpg 2x"
+              src="./images/team/img-2_sm.jpg"
+              alt="Николай Тарасов"
+              width="270"
+              loading="lazy">
+            </picture>
+          
               <div class="persona-info">
                 <h3 class="our-team">Николай Тарасов</h3>
                 <p class="our-team-professions">Marketing</p>
@@ -437,11 +470,21 @@
               </div>
             </li>
             <li class="our-team-people">
-              <img
-                src="./images/photo4.jpg"
-                alt="Михаил Ермаков"
-                height="260"
-              />
+                <picture>
+              <source
+              media="(min-width: 1280px)"
+              srcset="./images/team/img-3_lg.jpg 1x, ./images/team/img@2x-3_lg.jpg 2x">
+              <source
+              media="(min-width: 768px)"
+              srcset="./images/team/img-3_md.jpg 1x, ./images/team/img@2x-3_md.jpg 2x">
+              <img class="image"              
+              srcset="./images/team/img-3_sm.jpg 1x, ./images/team/img@2x-3_sm.jpg 2x"
+              src="./images/team/img-3_sm.jpg"
+              alt="Михаил Ермаков"
+              width="270"
+              loading="lazy">
+            </picture>
+          
               <div class="persona-info">
                 <h3 class="our-team">Михаил Ермаков</h3>
                 <p class="our-team-professions">UI Designer</p>
@@ -532,10 +575,12 @@
       </section>
     </main>
     <!--подвал страницы-->
-      <!-- <footer class="footer">
+      <footer class="footer">
       <div class="container footer-content">
+        <div class="footer-tablet">
         <div class="footer-content-pages">
-          <a href="./index.html" class="logo link"
+        
+          <a href="./index.html" class="logo link logo-webstudio"
             ><span class="logo-text-first">Web</span
             ><span class="logo-text-second-footer">Studio</span></a
           >
@@ -558,6 +603,7 @@
           </address>
         </div>
         <div class="footer-content-pages">
+          
           <h3 class="footer-web">ПРИСОЕДИНЯЙТЕСЬ</h3>
           <ul class="social-link-footer">
             <li class="footer-social-pages">
@@ -590,6 +636,7 @@
             </li>
           </ul>
         </div>
+        </div>
         <div class="footer-content-pages">
           <h3 class="footer-web">Подпишитесь на рассылку</h3>
           <form class="footer-form">
@@ -608,7 +655,7 @@
           </form>
         </div>
       </div>
-    </footer>  -->
+    </footer>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
