@@ -52,6 +52,20 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @include mq(tablet-only) {
+    margin-right: 0;
+  }
+}
+
+.navigation-tablet-only {
+  @include mq(tablet-only) {
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 .contacts-link {
   @include mq(tablet-only) {
