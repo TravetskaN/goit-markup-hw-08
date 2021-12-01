@@ -1,6 +1,10 @@
 .header {
   border-bottom: 1px solid #ececec;
-  padding: 10px 0;
+
+  @include mq(mobile-only) {
+    padding: 10px 0;
+  }
+
   &-container {
     display: flex;
     align-items: center;

@@ -101,7 +101,12 @@ p {
 /*  == Components styles ==  */
 .header {
   border-bottom: 1px solid #ececec;
-  padding: 10px 0;
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    padding: 10px 0;
+  }
 }
 
 .header-container {
